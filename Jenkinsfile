@@ -6,7 +6,7 @@ pipeline {
 
   }
   stages {
-    stage('') {
+    stage('maven-build') {
       steps {
         container(name: 'mvn', shell: 'mvn clean package -Dmaven.skip.test=true -U')
       }
