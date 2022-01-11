@@ -1,14 +1,15 @@
 pipeline {
-  agent {
-    docker {
-      image 'maven:alpine'
-    }
-
-  }
+  agent none
   stages {
-    stage('maven-build') {
+    stage('1') {
+      agent {
+        docker {
+          image 'mven:alpine'
+        }
+
+      }
       steps {
-        container(name: 'mvn', shell: 'mvn clean package -Dmaven.skip.test=true -U')
+        sh 'mvn clean package -Dmaven.skip.test=true -U'
       }
     }
 
