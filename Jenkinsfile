@@ -14,9 +14,6 @@ pipeline {
         archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
       }
       
-      steps {
-        sh 'mvn clean test'
-      }
     }
 
   }
