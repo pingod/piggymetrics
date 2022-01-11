@@ -4,7 +4,7 @@ pipeline {
     stage('1') {
       agent {
         docker {
-          image 'mven:alpine'
+          image 'registry.cn-hangzhou.aliyuncs.com/sourcegarden/docker-maven-aliyun:jdk-8'
         }
 
       }
